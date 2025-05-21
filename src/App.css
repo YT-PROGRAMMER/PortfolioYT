@@ -416,7 +416,7 @@ header .mobile ul button {
 /* start contact */
 .contact {
   height: calc(100% - (50px + 63px));
-  position: relative;
+/*   position: relative; */
 }
 .contact .container {
   display: flex;
