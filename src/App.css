@@ -416,14 +416,12 @@ header .mobile ul button {
 /* start contact */
 .contact {
   height: calc(100% - (50px + 63px));
-/*   position: relative; */
 }
 .contact .container {
   display: flex;
   align-items: center;
   justify-content: space-around;
   height: 100%;
-position: relative;
 }
 .contact .container .right {
   position: relative;
