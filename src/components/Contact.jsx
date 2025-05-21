@@ -1,7 +1,7 @@
 import React from 'react'
 import img1 from "../assets/image/Group 2372.png"
 import img2 from "../assets/image/Vector 186.png"
-import { Email } from './email';
+import { Email } from './Email';
 const Contact = () => {
   return (
     <div className="contact">
