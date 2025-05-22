@@ -11,6 +11,9 @@ body {
   height: 100vh;
   font-family: "Roboto", sans-serif;
   background-color: #222831;
+    overscroll-behavior: contain;
+  /* أو */
+  overscroll-behavior-y: contain;
 }
 li {
   list-style: none;
