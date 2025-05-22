@@ -7,16 +7,19 @@ import Contact from "./components/Contact";
 import Header from "./components/Header";
 import React, { useState, useEffect } from "react";
 function App() {
- const handleMouseMove = (e) => {
-      setMousePos({ x: e.clientX, y: e.clientY });
-    };
+   const [position, setPosition] = useState({ x: 0, y: 0 });
 
-    window.addEventListener("mousemove", handleMouseMove);
+  useEffect(() => {
+    const move = (e) => {
+      setPosition({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener("mousemove", move);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousemove", move);
     };
   }, []);
+
 
   
   const [currentComponent, setCurrentComponent] = useState("home");
