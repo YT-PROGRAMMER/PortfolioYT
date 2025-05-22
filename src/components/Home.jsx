@@ -11,7 +11,7 @@ const Home = () => {
           <h1 className="h1">YOUSSEF TAREK</h1>
           <h1 className="span">FRONTEND DEVELOPER</h1>
           <img src={photo} alt="photo error" />
-          <a href="../assets/files/YoussefCv.pdf" download>Download Cv <i className="fa-solid fa-download"></i></a>
+          <a href="files/YoussefCv.pdf" download>Download Cv <i className="fa-solid fa-download"></i></a>
         </div>
         <div className="image">
           <img src={TwoPhoto} alt="photo error" className="photo1"/>
