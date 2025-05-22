@@ -416,7 +416,6 @@ header .mobile ul button {
 /* start contact */
 .contact {
   height: calc(100% - (50px + 63px));
-  position: relative;
 }
 .contact .container {
   display: flex;
@@ -637,7 +636,7 @@ textarea:focus {
   .contact .container form textarea {
     border-radius: 0;
     width: 180px;
-    height: 250px;
+    height: 180px;
   }
 }
 /*end mobile */
