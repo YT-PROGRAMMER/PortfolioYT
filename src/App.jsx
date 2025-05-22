@@ -42,21 +42,22 @@ function App() {
   };
   return (
     <>
-      <div
+    <div
       style={{
         position: "fixed",
-        top: mousePos.y - 30,
-        left: mousePos.x - 30,
-        width: 60,
-        height: 60,
-        border: "3px solid #00adb5",
+        top: position.y - 40, // عشان تبقى في النص
+        left: position.x - 40,
+        width: 80,
+        height: 80,
         borderRadius: "50%",
+        border: "3px solid #00adb5",
+        backgroundColor: "transparent",
         pointerEvents: "none",
-        transition: "top 0.03s linear, left 0.03s linear",
         zIndex: 9999,
-        mixBlendMode: "difference",
+        transition: "top 0.05s linear, left 0.05s linear",
+        mixBlendMode: "difference", // شكلها يبان فوق الخلفية
       }}
-    />
+    ></div>
       <Header setCurrentComponent={setCurrentComponent} />
       {handleComponent()}
     </>
