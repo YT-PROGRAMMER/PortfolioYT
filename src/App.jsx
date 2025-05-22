@@ -30,7 +30,7 @@ function App() {
     pointerEvents: "none", // عشان الدائرة ما تأثرش على تفاعل الماوس مع الصفحة
     transition: "top 0.05s ease, left 0.05s ease", // حركة سلسة
     zIndex: 9999,
-    background: red,
+    background: "red",
   };
 
 
