@@ -21,18 +21,17 @@ function App() {
 
   const circleStyle = {
     position: "fixed",
-    top: position.y - 15, // ناقص نصف قطر الدائرة عشان يكون مركزها حوالين الماوس
-    left: position.x - 15,
-    width: 30,
-    height: 30,
-    border: "2px solid #00adb5",
+    top: mousePos.y - 30, // نصف القطر
+    left: mousePos.x - 30,
+    width: 60,
+    height: 60,
+    border: "3px solid #00adb5",
     borderRadius: "50%",
-    pointerEvents: "none", // عشان الدائرة ما تأثرش على تفاعل الماوس مع الصفحة
-    transition: "top 0.05s ease, left 0.05s ease", // حركة سلسة
+    pointerEvents: "none",
+    transition: "top 0.03s linear, left 0.03s linear",
     zIndex: 9999,
-    background: "red",
+    mixBlendMode: "difference", // تأثير جميل لو الخلفية فاتحة
   };
-
 
 
 
