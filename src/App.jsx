@@ -7,33 +7,16 @@ import Contact from "./components/Contact";
 import Header from "./components/Header";
 import React, { useState, useEffect } from "react";
 function App() {
-    const [position, setPosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+ const handleMouseMove = (e) => {
+      setMousePos({ x: e.clientX, y: e.clientY });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
 
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
   }, []);
-
-  const circleStyle = {
-    position: "fixed",
-    top: mousePos.y - 30, // نصف القطر
-    left: mousePos.x - 30,
-    width: 60,
-    height: 60,
-    border: "3px solid #00adb5",
-    borderRadius: "50%",
-    pointerEvents: "none",
-    transition: "top 0.03s linear, left 0.03s linear",
-    zIndex: 9999,
-    mixBlendMode: "difference", // تأثير جميل لو الخلفية فاتحة
-  };
-
-
 
   
   const [currentComponent, setCurrentComponent] = useState("home");
@@ -56,7 +39,21 @@ function App() {
   };
   return (
     <>
-       <div style={circleStyle}></div>
+      <div
+      style={{
+        position: "fixed",
+        top: mousePos.y - 30,
+        left: mousePos.x - 30,
+        width: 60,
+        height: 60,
+        border: "3px solid #00adb5",
+        borderRadius: "50%",
+        pointerEvents: "none",
+        transition: "top 0.03s linear, left 0.03s linear",
+        zIndex: 9999,
+        mixBlendMode: "difference",
+      }}
+    />
       <Header setCurrentComponent={setCurrentComponent} />
       {handleComponent()}
     </>
