@@ -9,11 +9,14 @@ export const Email = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !Text.trim()) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Something went wrong!",
-      });
+Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: "Something went wrong!",
+  scrollbarPadding: false,
+  heightAuto: false,
+  allowOutsideClick: false,
+});
     }else {
       emailjs
         .sendForm("service_e0t21ja", "template_4lesw5j", form.current, {
@@ -23,20 +26,26 @@ export const Email = () => {
           () => {
 Swal.fire({
   title: "Good job!",
-  text: "You clicked the button!",
-  icon: "success"
+  text: "Your message has been sent!",
+  icon: "success",
+  scrollbarPadding: false,
+  heightAuto: false,
+  allowOutsideClick: false,
 });
+
             setName("");
             setEmail("");
             setText("");
           },
           () => {
-            Swal.fire({
-              icon: "error",
-              title: "Oops...",
-              text: "Something went wrong!",
-              footer: '<a href="#">Why do I have this issue?</a>',
-            });
+Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: "Something went wrong!",
+  scrollbarPadding: false,
+  heightAuto: false,
+  allowOutsideClick: false,
+});
             setName("");
             setEmail("");
             setText("");
