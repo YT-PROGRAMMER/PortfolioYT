@@ -34,19 +34,19 @@ const projectsData = [
     img: img3,
   },
   {
-    title: "frontendMentor1",
+    title: "Mentor1",
     type: "html&css",
     url: "https://yt-programmer.github.io/fron-mentor-1-/",
     img: img4,
   },
   {
-    title: "frontendMentor2",
+    title: "Mentor2",
     type: "html&css",
     url: "https://yt-programmer.github.io/front-mentor-3/",
     img: img5,
   },
   {
-    title: "frontendMentor3",
+    title: "Mentor3",
     type: "html&css",
     url: "https://yt-programmer.github.io/frontend-mentor-2/",
     img: img6,
