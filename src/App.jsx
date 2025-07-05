@@ -1,5 +1,6 @@
 import "./App.css";
 import Home from "./components/Home";
+import Loading from "./components/Loading";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
@@ -7,6 +8,12 @@ import Contact from "./components/Contact";
 import Header from "./components/Header";
 import React, { useState, useEffect } from "react";
 function App() {
+
+  useEffect(() => {
+    setTimeout(() => {
+      <Loading />
+    }, 3000)
+  }, [])
   const [currentComponent, setCurrentComponent] = useState("home");
   const handleComponent = () => {
     switch (currentComponent) {
