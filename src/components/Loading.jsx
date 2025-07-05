@@ -1,6 +1,6 @@
 const Loading = () => {
     return (
-        <!-- From Uiverse.io by Nawsome --> 
+        
 <div class="svg-frame">
 	<svg style="--i:0;--j:0;">
 		<g id="out1">
