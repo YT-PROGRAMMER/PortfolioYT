@@ -40,7 +40,7 @@ function App() {
   return (
     <>
       <Header setCurrentComponent={setCurrentComponent} />
-      {isLoading ? <Loading/> : handleComponent()}
+      {isLoading ? <Loading  /> : handleComponent()}
     
     </>
   );
