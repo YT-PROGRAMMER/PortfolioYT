@@ -8,12 +8,17 @@ import Contact from "./components/Contact";
 import Header from "./components/Header";
 import React, { useState, useEffect } from "react";
 function App() {
-
-  useEffect(() => {
+  const [isLoading, setLoading] = useState(true)
+  const handleLoading =( ) => {
     setTimeout(() => {
-      <Loading />
+      setLoading(false)
     }, 3000)
+
+  }
+  useEffect(() => {
+    handleLoading()
   }, [])
+
   const [currentComponent, setCurrentComponent] = useState("home");
   const handleComponent = () => {
     switch (currentComponent) {
@@ -35,7 +40,8 @@ function App() {
   return (
     <>
       <Header setCurrentComponent={setCurrentComponent} />
-      {handleComponent()}
+      {isLoading ? <Loading/> :handleComponent()}
+    
     </>
   );
 }
